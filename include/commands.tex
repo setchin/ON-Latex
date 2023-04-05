@@ -1,0 +1,90 @@
+%gb4e 命令 引入后立刻调用
+\counterwithin{exx}{subsection}
+\setlength{\glossglue}{5pt plus 2pt minus 1pt}
+\setmainfont{XITS}
+\renewcommand\th{þ}
+\noautomath
+% 画图颜色
+\definecolor {shadecolor}{rgb}{0.92,0.92,0.92}
+\definecolor {WASURENAGUSA}{RGB}{125,185,222}
+% 修改标题页的橙色带
+\definecolor{customcolor}{RGB}{32,178,170}
+\colorlet{coverlinecolor}{customcolor}
+
+% 文字上下标
+\makeatletter
+\newcommand{\dynscriptsize}{\check@mathfonts\fontsize{\sf@size}{\z@}\selectfont}
+\makeatother
+\newcommand\textunderset[2]{%
+    \leavevmode
+    \vtop{\offinterlineskip
+        \halign{%
+            \hfil##\hfil\cr % center
+            \strut#2\cr
+            \noalign{\kern-.3ex}
+            \dynscriptsize\strut#1\cr
+        }%
+    }%
+}
+\newcommand\textoverset[2]{%
+    \leavevmode
+    \vbox{\offinterlineskip
+        \halign{%
+            \hfil##\hfil\cr % center
+            \dynscriptsize\strut#1\cr
+            \noalign{\kern-.3ex}
+            \strut#2\cr
+        }%
+    }%
+}
+
+\tcbuselibrary{skins, breakable, theorems}
+% 三种盒子
+\newtcolorbox{info}{breakable,colframe=main,colback=second!5,colbacktitle=second, left=2em,extras={colframe=main,colback=second!5,colbacktitle=second}}
+\newtcbtheorem{grammar}{语法}
+{enhanced,breakable,
+    colback = white, colframe = WASURENAGUSA, colbacktitle = WASURENAGUSA,
+    attach boxed title to top left = {yshift = -2mm, xshift = 5mm},
+    boxed title style = {sharp corners},
+    fonttitle = \sffamily, extras ={enhanced, attach boxed title to top left = {yshift = -2mm, xshift = 5mm},
+            boxed title style = {sharp corners}},colback = white, colframe = WASURENAGUSA, colbacktitle = WASURENAGUSA}{gmr}
+
+\newtcbtheorem{translation}{中文意译}
+{enhanced, breakable,
+    colback = white, colframe = gray, colbacktitle = gray,
+    attach boxed title to top left = {yshift = -2mm, xshift = 5mm},
+    boxed title style = {sharp corners},
+    fonttitle = \sffamily, extras={enhanced, breakable,
+            colback = white, colframe = gray, colbacktitle = gray,
+            attach boxed title to top left = {yshift = -2mm, xshift = 5mm},
+            boxed title style = {sharp corners}}}{trans}
+
+% 字体
+\newfontfamily{\medieval}{Junicode}
+[Extension = .ttf,
+    BoldFont = *-Bold ,
+    ItalicFont = *-Italic ,
+    BoldItalicFont = *-BoldItalic]
+\newfontfamily{\andron}{Andron_Scriptor}
+[Extension = .ttf]
+
+% 中世纪手稿用字符
+\newcommand\nwithdescender{{\medieval }}
+\newcommand\Eunical{{\medieval }}
+\newcommand\Eclosedunical{{\medieval }}
+% 语法命令
+\newcommand{\nom}{\textsc{n}}
+\newcommand{\gen}{\textsc{g}}
+\newcommand{\dat}{\textsc{d}}
+\newcommand{\acc}{\textsc{a}}
+\newcommand{\mas}{\textsc{m}}
+\newcommand{\neu}{\textsc{neu}}
+\newcommand{\fem}{\textsc{f}}
+\newcommand{\pl}{\textsc{p}}
+\newcommand{\sing}{\textsc{s}}
+\newcommand{\sub}{\textsc{sub}}
+\newcommand{\DEF}{\textsc{def}}
+
+\makeatletter
+\@addtoreset{chapter}{part}
+\makeatletter

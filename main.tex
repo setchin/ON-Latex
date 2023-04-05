@@ -1,0 +1,57 @@
+\documentclass[lang=cn,newtx,10pt,scheme=chinese,color=black]{elegantbook}
+
+\title{ElegantBook：优美的 \LaTeX{} 书籍模板}
+\subtitle{Elegant\LaTeX{} 经典之作}
+
+\author{Ethan Deng \& Liam Huang \& syvshc \& sikouhjw \& Osbert Wang}
+\institute{Elegant\LaTeX{} Program}
+\date{2022/12/31}
+\version{4.5}
+\bioinfo{自定义}{信息}
+
+\extrainfo{注意：本模板自 2023 年 1 月 1 日开始，不再更新和维护！}
+
+\setcounter{tocdepth}{3}
+
+\logo{logo-blue.png}
+\cover{cover.jpg}
+
+\input{include/packages.tex}
+\input{include/commands.tex}
+\makeindex[columns=3,program=texindy,options=-M texindy -L icelandic -C utf8]
+\addbibresource[location=local]{reference.bib} % 参考文献，不要删除
+\begin{document}
+\maketitle
+\frontmatter
+\clearpage
+\begin{center}
+  \thispagestyle{empty}
+  \vspace*{\fill}
+  \Large Dedication
+  \vspace*{\fill}
+\end{center}
+\clearpage
+\tableofcontents
+\mainmatter
+% 缩写表 待完成
+% \input{chapters/intro.tex}
+\part{语法}
+% \input{chapters/chapter-1.tex}
+\input{grammar/chapter-7.tex}
+\part{句法}
+% 必须加一个简单介绍！！！
+
+\input{syntax/syntax-NP.tex}
+\part{读本}
+\mergedfootnotes
+\input{reading/reading-1.tex}
+\input{reading/reading-2.tex}
+\input{reading/reading-3.tex}
+\input{reading/reading-4}
+\input{reading/reading-FGT}
+\input{reading/reading-mss.tex}
+\printindex
+\printbibliography[heading=bibintoc, title=\ebibname]
+\end{document}
+
+
