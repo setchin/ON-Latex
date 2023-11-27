@@ -10,7 +10,13 @@
 % 修改标题页的橙色带
 \definecolor{customcolor}{RGB}{32,178,170}
 \colorlet{coverlinecolor}{customcolor}
-
+% footnote左对齐
+\makeatletter
+\renewcommand\@makefntext[1]{%
+    \setlength\parindent{1em}%
+    \noindent
+    \mbox{\textsuperscript{\@thefnmark}\,}{#1}}
+\makeatother
 % 文字上下标
 \makeatletter
 \newcommand{\dynscriptsize}{\check@mathfonts\fontsize{\sf@size}{\z@}\selectfont}
@@ -88,3 +94,5 @@
 \makeatletter
 \@addtoreset{chapter}{part}
 \makeatletter
+
+\footnotelayout{m}

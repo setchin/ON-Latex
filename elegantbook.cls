@@ -380,7 +380,7 @@
 \AtBeginDocument{
   \setlength{\abovedisplayskip}{3pt}
   \setlength{\belowdisplayskip}{3pt}
-  \RequirePackage[flushmargin,stable]{footmisc}
+  % \RequirePackage[flushmargin,stable]{footmisc}
   \setlength{\footnotesep}{12pt}
 }
 
