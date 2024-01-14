@@ -18,7 +18,7 @@
 
 \input{include/packages.tex}
 \input{include/commands.tex}
-\makeindex[columns=3,program=texindy,options=-M texindy -L icelandic -C utf8]
+\makeindex[intoc=true,columns=3,program=texindy,options=-M texindy -L icelandic -C utf8]
 \addbibresource[location=local]{reference.bib} % 参考文献，不要删除
 \begin{document}
 \maketitle
@@ -37,19 +37,19 @@
 % \input{chapters/intro.tex}
 \part{语法}
 % \input{chapters/chapter-1.tex}
-\input{grammar/chapter-7.tex}
-\part{句法}
+\input{grammar/chapter-4.tex}
+% \part{句法}
 % 必须加一个简单介绍！！！
 
-\input{syntax/syntax-adj.tex}
-\part{读本}
-\input{reading/reading-1.tex}
-\input{reading/reading-2.tex}
-\input{reading/reading-3.tex}
-\input{reading/reading-4}
-\input{reading/reading-FGT}
-\input{reading/reading-mss.tex}
-\input{reading/reading-history.tex}
+% \input{syntax/syntax-adj.tex}
+% \part{读本}
+% \input{reading/reading-1.tex}
+% \input{reading/reading-2.tex}
+% \input{reading/reading-3.tex}
+% \input{reading/reading-4}
+% \input{reading/reading-FGT}
+% \input{reading/reading-mss.tex}
+% \input{reading/reading-history.tex}
 \printindex
 \printbibliography[heading=bibintoc, title=\ebibname]
 \end{document}
