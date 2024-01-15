@@ -7,9 +7,12 @@
 % 画图颜色
 \definecolor {shadecolor}{rgb}{0.92,0.92,0.92}
 \definecolor {WASURENAGUSA}{RGB}{125,185,222}
+
 % 修改标题页的橙色带
-\definecolor{customcolor}{RGB}{32,178,170}
+\definecolor{customcolor}{RGB}{240,248,255}
 \colorlet{coverlinecolor}{customcolor}
+% 修改quote缩进距离
+\patchcmd{\quote}{\rightmargin}{\leftmargin 6em \rightmargin}{}{}
 % footnote左对齐
 \makeatletter
 \renewcommand\@makefntext[1]{%
@@ -46,7 +49,9 @@
 
 \tcbuselibrary{skins, breakable, theorems}
 % 三种盒子
-\newtcolorbox{info}{breakable,colframe=main,colback=second!5,colbacktitle=second, left=2em,extras={colframe=main,colback=second!5,colbacktitle=second}}
+\newtcolorbox{info}{
+    breakable,enhanced, frame hidden, colback=LightSkyBlue!30!white,left=1mm,
+    extras={frame hidden, colback=LightSkyBlue!30!white,left=1mm}}
 \newtcbtheorem{grammar}{语法}
 {enhanced,breakable,
     colback = white, colframe = WASURENAGUSA, colbacktitle = WASURENAGUSA,
