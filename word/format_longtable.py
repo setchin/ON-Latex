@@ -1,5 +1,5 @@
 import re
-with open('./word/out.tex', encoding="utf8") as f:
+with open('./word/out_ref.tex', encoding="utf8") as f:
     lines = f.readlines()
 
 longtable_start = []

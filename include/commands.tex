@@ -1,13 +1,16 @@
 %gb4e 命令 引入后立刻调用
 \counterwithin{exx}{subsection}
 \setlength{\glossglue}{5pt plus 2pt minus 1pt}
+
 \setmainfont{FreeSerif}
 \renewcommand\th{þ}
 \noautomath
 % 画图颜色
 \definecolor {shadecolor}{rgb}{0.92,0.92,0.92}
 \definecolor {WASURENAGUSA}{RGB}{125,185,222}
-
+% 自定义标题
+\titleformat{\subsubsection}[block]{\normalsize\normalfont\bfseries}{\arabic{subsubsection})}{1em}{}[]
+\titlespacing*{\subsubsection}{\parindent}{1ex}{1em}
 % 修改标题页的橙色带
 \definecolor{customcolor}{RGB}{240,248,255}
 \colorlet{coverlinecolor}{customcolor}
