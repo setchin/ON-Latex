@@ -280,7 +280,7 @@
 % ----- Handle Colors -----
 %% 章节以及页脚图形
 
-\RequirePackage[table]{xcolor}
+\RequirePackage[table,dvipsnames,x11names,svgnames]{xcolor}
 \ifdefstring{\ELEGANT@color}{green}{
   \definecolor{structurecolor}{RGB}{0,120,2}%
   \definecolor{main}{RGB}{0,120,2}%
