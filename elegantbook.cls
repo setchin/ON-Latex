@@ -894,8 +894,8 @@
 %%and proof environment
 \RequirePackage{pifont,manfnt,bbding}
 \RequirePackage[many]{tcolorbox}
-% \newlength{\normalparindent}
-% \setlength{\normalparindent}{\parindent}
+\newlength{\normalparindent}
+\setlength{\normalparindent}{\parindent}
 \newcommand{\ELEGANT@tmp@tl}{}
 \ifELEGANT@usesamecnt
   \newcounter{ELEGANT@samecnt}

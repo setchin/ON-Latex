@@ -36,20 +36,26 @@
 % 缩写表 待完成
 % \input{chapters/intro.tex}
 \part{语法}
-% \input{chapters/chapter-1.tex}
+\input{grammar/chapter-1.tex}
 \input{grammar/chapter-3.tex}
+\input{grammar/chapter-4.tex}
+\input{grammar/chapter-5.tex}
+\input{grammar/chapter-6.tex}
+\input{grammar/chapter-7.tex}
 % \part{句法}
 % 必须加一个简单介绍！！！
 
 % \input{syntax/syntax-adj.tex}
-% \part{读本}
-% \input{reading/reading-1.tex}
-% \input{reading/reading-2.tex}
-% \input{reading/reading-3.tex}
-% \input{reading/reading-4}
-% \input{reading/reading-FGT}
-% \input{reading/reading-mss.tex}
-% \input{reading/reading-history.tex}
+\part{读本}
+
+\patchcmd{\quote}{\rightmargin}{\leftmargin 2em \rightmargin}{}{} % 重新改回quote缩进距离
+\input{reading/reading-1.tex}
+\input{reading/reading-2.tex}
+\input{reading/reading-3.tex}
+\input{reading/reading-4}
+\input{reading/reading-FGT}
+\input{reading/reading-mss.tex}
+\input{reading/reading-history.tex}
 \printindex
 \printbibliography[heading=bibintoc, title=\ebibname]
 \end{document}

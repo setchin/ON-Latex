@@ -52,9 +52,15 @@
 
 \tcbuselibrary{skins, breakable, theorems}
 % 三种盒子
-\newtcolorbox{info}{
-    breakable,enhanced, frame hidden, colback=LightSkyBlue!30!white,left=1mm,
-    extras={frame hidden, colback=LightSkyBlue!30!white,left=1mm}}
+\newtcolorbox{infobox}{
+    breakable,enhanced, frame hidden, colback=LightSkyBlue!30!white,parbox = false,
+    extras={frame hidden, colback=LightSkyBlue!30!white}}
+
+\newcommand{\noleftmargin}{\setlist[enumerate]{leftmargin=*}}
+\newcommand{\keepleftmargin}{\setlist[enumerate]{labelindent=\parindent,leftmargin=*}}
+\newenvironment{info}{\noleftmargin \tcbset{left*=\parindent} \begin{infobox}}{\end{infobox} \keepleftmargin}
+\keepleftmargin
+% set default enumerate indent in info environment
 \newtcbtheorem{grammar}{语法}
 {enhanced,breakable,
     colback = white, colframe = WASURENAGUSA, colbacktitle = WASURENAGUSA,
@@ -64,11 +70,11 @@
             boxed title style = {sharp corners}},colback = white, colframe = WASURENAGUSA, colbacktitle = WASURENAGUSA}{gmr}
 
 \newtcbtheorem{translation}{中文意译}
-{enhanced, breakable,
+{enhanced, breakable,parbox = false, before upper={\par},
     colback = white, colframe = gray, colbacktitle = gray,
     attach boxed title to top left = {yshift = -2mm, xshift = 5mm},
     boxed title style = {sharp corners},
-    fonttitle = \sffamily, extras={enhanced, breakable,
+    fonttitle = \sffamily, extras={enhanced, parbox = false,breakable,
             colback = white, colframe = gray, colbacktitle = gray,
             attach boxed title to top left = {yshift = -2mm, xshift = 5mm},
             boxed title style = {sharp corners}}}{trans}

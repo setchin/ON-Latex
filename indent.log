@@ -1,7 +1,7 @@
 INFO:  latexindent.exe version 3.16, 2022-03-13, a script to indent .tex files
        latexindent.exe lives here: E:/texlive/2022/bin/win32/
-       Fri Jan 19 11:39:06 2024
-       Filename: c:/Users/kraanium/Desktop/Latex Projects/ON_book/word/__latexindent_temp_out_ref.tex
+       Sat Feb 10 17:22:01 2024
+       Filename: c:/Users/kraanium/Desktop/Latex Projects/ON_book/grammar/__latexindent_temp_chapter-3.tex
 INFO:  Processing switches:
        -y|--yaml: YAML settings specified via command line
        -c|--cruft: cruft directory
@@ -15,9 +15,9 @@ INFO:  YAML settings read: indentconfig.yaml or .indentconfig.yaml
        To specify user settings you would put indentconfig.yaml here: C:\Users\kraanium/indentconfig.yaml
        Alternatively, you can use the hidden file .indentconfig.yaml as: C:\Users\kraanium/.indentconfig.yaml
 INFO:  YAML settings read: -y switch
-       YAML setting: defaultIndent:'  '
-       single-quoted string found in -y switch: '  ', substitute to   
-       Updating mainSettings with defaultIndent:   
+       YAML setting: defaultIndent:'    '
+       single-quoted string found in -y switch: '    ', substitute to     
+       Updating mainSettings with defaultIndent:     
 INFO:  Phase 1: searching for objects
 INFO:  Phase 2: finding surrounding indentation
 INFO:  Phase 3: indenting objects
