@@ -9,7 +9,7 @@
 \definecolor {shadecolor}{rgb}{0.92,0.92,0.92}
 \definecolor {WASURENAGUSA}{RGB}{125,185,222}
 % 自定义标题
-\titleformat{\subsubsection}[block]{\normalsize\normalfont\bfseries}{\arabic{subsubsection})}{1em}{}[]
+\titleformat{\subsubsection}[block]{\normalsize\normalfont\bfseries}{\Alph{subsubsection}.}{1em}{}[]
 \titlespacing*{\subsubsection}{\parindent}{1ex}{1em}
 % 修改标题页的橙色带
 \definecolor{customcolor}{RGB}{240,248,255}
@@ -49,7 +49,7 @@
         }%
     }%
 }
-
+\usepackage{subcaption}
 \tcbuselibrary{skins, breakable, theorems}
 % 三种盒子
 \newtcolorbox{infobox}{
@@ -110,5 +110,7 @@
 \makeatletter
 \@addtoreset{chapter}{part}
 \makeatletter
+% part后重置章节号
 
+% paracol 合并footnote
 \footnotelayout{m}

@@ -373,7 +373,7 @@
 \RequirePackage[shortlabels,inline]{enumitem}
 \setlist{nolistsep}
 
-\RequirePackage[labelfont={bf,color=structurecolor}]{caption}
+\RequirePackage[labelfont={bf,color=structurecolor},justification=centering]{caption}
 \captionsetup[table]{skip=3pt}
 \captionsetup[figure]{skip=3pt}
 
@@ -1447,6 +1447,19 @@
 % https://tex.stackexchange.com/questions/56839/chaptername-is-used-even-for-appendix-chapters-in-toc
 \RequirePackage{calc}
 \RequirePackage[titles]{tocloft}
+\renewcommand{\cftdot}{\ensuremath{\cdot} }
+\renewcommand{\cftdotsep}{2}
+
+
+% 这部分消除了part部分的页码并使得标题居中
+\cftpagenumbersoff{part} % 首先关闭页码，同时消除了标题后的点划线
+\renewcommand{\cftpartfont}{\large\bfseries\hfill} % 在标题前插入hfill
+\renewcommand{\cftpartfillnum}[1]{
+  \hfill\hfill\par
+} % 关闭页码后，\cftpartfillnum被重写，此时重新改写其并插入hfill在标题后
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+
+
 \ifdefstring{\ELEGANT@lang}{cn}{
   % \renewcommand{\cftchappresnum}{\beforechap\space}
   % \renewcommand{\cftchapaftersnum}{\space\afterchap}
